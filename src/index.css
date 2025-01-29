@@ -1,0 +1,126 @@
+@font-face {
+  font-family: "Funnel Display";
+  src: url("./assets/fonts/FunnelDisplay-Regular.ttf");
+}
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Funnel Display";
+}
+
+header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0, 0%, 87%);
+  color: hsl(0, 0%, 14%);
+  padding: 1rem 3rem;
+  box-shadow: black 0px 0px 10px;
+}
+
+header span{
+  color: hsl(0, 81%, 51%);
+}
+
+header .upper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+header h1{
+  position: absolute;
+  left: 3rem;
+}
+
+.searchBar{
+  width: 40%;
+}
+
+.searchBar input{
+  width: 100%;
+  padding: 0.4rem;
+  border-radius: 10px;
+  border:none;
+}
+
+.searchBar button{
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  cursor: pointer;
+  top: 20px;
+  right: 33vw;
+  color: hsl(0, 0%, 27%);
+}
+
+.subredditList{
+  display: flex;
+  overflow-x: auto;
+  justify-content: space-around;
+  white-space: nowrap;
+  width: 100%;
+  height: auto;
+  scrollbar-width: thin;
+  scrollbar-color: hsla(0, 0%, 37%, 0.116) transparent;
+}
+
+.subredditList::-webkit-scrollbar{
+  height: 6px;
+  border-radius: 50px;
+}
+
+.subredditList::-webkit-scrollbar-button{
+  display: none;
+}
+
+.subredditList::-webkit-scrollbar-track{
+  border-radius: 6px;
+  background: transparent;
+}
+
+.subredditList button{
+  border: none;
+  background-color: transparent;
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+button.selected img{
+  border: 3px solid grey;
+}
+
+button.selected h2{
+  color: grey;
+}
+
+.subredditList img{
+  height: 30px;
+  width: 30px;
+  border-radius: 50px;
+}
+
+.subredditList h2{
+  font-size: 10px;
+}
+
+@media screen and (max-width: 740px){
+  header .upper{
+    justify-content: end;
+    font-size: 13px;
+  }
+
+  .searchBar{
+    width: 50%;
+  }
+
+  .searchBar button{
+    right: 60px;
+  }
+}
